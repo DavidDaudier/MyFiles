@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d4dce6"
+    android:orientation="vertical"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:id="@+id/linearFichierRecents"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_home_case"
+        android:padding="8dp"
+        android:layout_margin="10dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:src="@drawable/clock_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="2dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Fichiers récents"
+            android:textColor="#121b95"
+            android:layout_gravity="center_vertical"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gothic_regular"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tv_categories"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/categories_home"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"
+            android:textColor="#f55376"
+            android:fontFamily="@font/gothic_bold"
+            android:text="Catégories"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/categories"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_weight=".8"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_home_case"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        //1er Ligne
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/linearImage"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:src="@drawable/image_home"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_image_home"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textSize="12sp"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gothic_bold"
+                    android:textAlignment="center"
+                    android:textColor="#121b95"
+                    android:text="Images"
+                    android:textFontWeight="@integer/material_motion_duration_short_1" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearVideo"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:src="@drawable/video_home"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_video_home"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textSize="12sp"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gothic_bold"
+                    android:textAlignment="center"
+                    android:textColor="#121b95"
+                    android:text="Vidéos"
+                    android:textFontWeight="@integer/material_motion_duration_short_1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearMusic"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:src="@drawable/music_home"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_music_home"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textSize="12sp"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gothic_bold"
+                    android:textAlignment="center"
+                    android:textColor="#121b95"
+                    android:text="Audio"
+                    android:textFontWeight="@integer/material_motion_duration_short_1"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        //2em Lignes
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linearDocs"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_docs_home"
+                    android:padding="4dp"
+                    android:src="@drawable/docs_home" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:text="Documents"
+                    android:textAlignment="center"
+                    android:textColor="#121b95"
+                    android:textFontWeight="@integer/material_motion_duration_short_1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gothic_bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearDownload"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_download_home"
+                    android:padding="4dp"
+                    android:src="@drawable/download_home" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="Téléchargements"
+                    android:layout_margin="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#121b95"
+                    android:textFontWeight="@integer/material_motion_duration_short_1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gothic_bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearApks"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_apks_home"
+                    android:padding="4dp"
+                    android:src="@drawable/apk_home" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="Fichiers install."
+                    android:layout_margin="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#121b95"
+                    android:textFontWeight="@integer/material_motion_duration_short_1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gothic_bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tv_stockages"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_storage"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="#00acc1"
+                android:fontFamily="@font/gothic_bold"
+                android:text="Stockages"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stockage"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:background="@drawable/bg_home_case"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/internal_storage"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/phone_home"
+                    android:padding="0dp"
+                    android:layout_margin="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="Stockage interne"
+                        android:textColor="#121b95"
+                        android:gravity="center_vertical"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/gothic_regular"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="27,67 Go / 32,00 Go"
+                        android:textColor="#8d81fb"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/gothic_regular"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d4dce6"
+                android:layout_marginStart="78dp"
+                android:layout_marginEnd="20dp">
+            </View>
+
+            <LinearLayout
+                android:id="@+id/sd_card_storage"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_marginStart="15dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/sdcard_home"
+                    android:padding="0dp"
+                    android:layout_margin="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="Carte SD"
+                        android:textColor="#121b95"
+                        android:gravity="center_vertical"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/gothic_regular"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="20,90 Go / 29,58 Go"
+                        android:textColor="#8d81fb"
+                        android:gravity="center_vertical"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/gothic_regular"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRecents_Files"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/img_back"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_home_case"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="Retour"
+                android:fontFamily="@font/gothic_bold"
+                android:textColor="#121b95" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_recents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+        </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/bottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:background="@color/black"
+                android:gravity="center_vertical"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:id="@+id/linearRenommer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_bottom_items">
+
+                    <ImageView
+                        android:src="@drawable/rename"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="2dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:text="Rénommer"
+                        android:textFontWeight="@integer/material_motion_duration_short_1"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:src="@drawable/details"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="2dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:text="Détails"
+                        android:textFontWeight="@integer/material_motion_duration_short_1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearPartager"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:src="@drawable/share"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="2dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:text="Partager"
+                        android:textFontWeight="@integer/material_motion_duration_short_1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearSupprimer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:src="@drawable/delete"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="2dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:text="Supprimer"
+                        android:textFontWeight="@integer/material_motion_duration_short_1"/>
+
+                </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

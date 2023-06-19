@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/move"
+            android:title="Deplacer"
+            android:icon="@drawable/move">
+        </item>
+
+        <item android:id="@+id/copy"
+            android:title="Copier"
+            android:icon="@drawable/copy">
+        </item>
+
+        <item android:id="@+id/compress"
+            android:title="Compresser"
+            android:icon="@drawable/compress">
+        </item>
+    </group>
+</menu>
